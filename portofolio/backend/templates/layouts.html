@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div class="app">
+        <div class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h3>My Portofolio</h3>
+                </div>
+                <div class="nav-menu">
+                    <a class="active" href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Project</a>
+                </div>
+                {% if current_user.is_authenticated %}
+                <div class="nav-user-menu">
+                    <a href="#">Hi, {{current_user.username}}</a>
+                    <a href="{{ url_for('user.logout') }}">Logout</a>
+                   
+                </div>
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message">
+                        <div class="alert-{{category}}">
+                            <p class="message-text">{{message}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}
+            
+        {% endblock %}
+    </div>
+</body>
+
+</html>
