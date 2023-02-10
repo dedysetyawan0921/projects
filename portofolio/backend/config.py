@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
-
 db = SQLAlchemy()
 bcrypt = Bcrypt()
 login_manager = LoginManager()
@@ -22,14 +21,11 @@ def run():
     login_manager.init_app(app)
 
     from users.routes import user
-    from about.routes import about
+    from abouts.routes import about
     from api.routes import api
-    #from errors.handlers import errors
-
-    # app.register_blueprint(users)
-    # app.register_blueprint(posts)
+  
     app.register_blueprint(user)
     app.register_blueprint(api)
-    # app.register_blueprint(errors)
+    app.register_blueprint(about)
 
     return app

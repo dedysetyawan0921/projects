@@ -2,17 +2,16 @@ from models import About
 from flask import render_template, url_for, redirect, Blueprint, request, flash
 from flask_login import login_required
 from config import db
-from about.forms import AboutForm
+from abouts.forms import AboutForm
 
 about = Blueprint('about', __name__)
 
-
 @about.route('/about')
 @login_required
-def about():
+def abouts():
     about = About.query.all()
-    return render_template('route', about=about)
-
+    return render_template('about.html', about=about)
+    
 
 @about.route('/about/create', methods=['GET', 'POST'])
 @login_required
@@ -26,6 +25,7 @@ def create_about():
         flash('Data berhasil di tambahkan', 'success')
         return redirect(url_for('about.about'))
     return render_template('about_create.html', form=form)
+
 
 @about.route('/about/<int:id>/update', methods=['GET', 'POST'])
 @login_required
@@ -52,6 +52,7 @@ def update_about(id):
         form.image_link.data = about.image_link
         form.phone.data = about.phone
     return render_template('about_create.html', title='Update About', form=form, legend='Update About')
+
 
 @about.route('/delete/<int:id>/delete', methods=['POST'])
 @login_required

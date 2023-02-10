@@ -18,7 +18,7 @@ def create_user():
         db.session.add(user)
         db.session.commit()
         flash('User berhasil dibuat', 'success')
-        return redirect(url_for('user.create_user'))
+        return redirect(url_for('user.login'))
     return render_template('register.html', form=form)
 
 

@@ -1,0 +1,145 @@
+{% extends 'layouts.html' %}
+
+{% block about %}
+style="color: orange;"
+{% endblock %}
+
+{% block content %}
+<div class="section-container">
+
+    <div class="welcome">
+        <h3>
+            About Me
+        </h3>
+        <div class="body">
+            <div class="profile">
+                <div class="profile-main">
+                    <div class="image-group">
+                        <img class="image-main" src="{{url_for('static', filename='DSC_8392.JPG')}}" alt="">
+                        <img class="image-second" src="{{url_for('static', filename='DSC_8392.JPG')}}" alt="">
+                        <div class="icon-group">
+                            <button class="icon">1</button>
+                            <button class="icon">2</button>
+                            <button class="icon">3</button>
+
+                        </div>
+                    </div>
+                    <div class="bio-group">
+                        <div class="items">
+                            <div class="items-group">
+                                <img src="{{url_for('static', filename='main.svg')}}" alt="">
+                                <h5 class="title">Name :</h5>
+                                <br>
+                                <span>Dedy Setyawan</span>
+                            </div>
+                            <div class="items-group">
+                                <img src="{{url_for('static', filename='main.svg')}}" alt="">
+                                <h5 class="title">Address :</h5>
+                                <br>
+                                <span>Kranji, Bekasi, West Java</span>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-group">
+                                <img src="{{url_for('static', filename='main.svg')}}" alt="">
+
+                                <h5 class="title">Email :</h5>
+                                <span>dedysetyawan</span>
+                                <span>0921@gmail.com</span>
+                            </div>
+                            <div class="items-group">
+                                <img src="{{url_for('static', filename='main.svg')}}" alt="">
+
+                                <h5 class="title">D O B :</h5>
+                                <span>09 Desember 1990</span>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-group">
+                                <img src="{{url_for('static', filename='main.svg')}}" alt="">
+
+                                <h5 class="title">Phone :</h5>
+                                <span>08993092109</span>
+                            </div>
+                            <div class="items-group">
+                                <img src="{{url_for('static', filename='main.svg')}}" alt="">
+
+                                <h5 class="title">Freelance :</h5>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="items" style="margin-top: 20px;">
+                            <div class="items-group">
+                                <button class="btn btn-primary" style="font-size: 16px; width: 389px;">Download My
+                                    CV</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="education">
+                        <h1 class="title">
+                            Education
+                        </h1>
+                        <div class="experience-group">
+                            <p><strong>2008 - 2012</strong></p>
+                            <div class="__">
+                                <p>STIE Swadaya, Jakarta</p>
+                                <p>Economy, Acounting</p>
+                            </div>
+                            
+                        </div>
+                        <div class="experience-group">
+                            <p><strong>2008 - 2012</strong></p>
+                            <div class="__">
+                                <p>STIE Swadaya, Jakarta</p>
+                                <p>Economy, Acounting</p>
+                            </div>
+                        
+                        </div>
+                        <div class="experience-group">
+                            <p><strong>2008 - 2012</strong></p>
+                            <div class="__">
+                                <p>STIE Swadaya, Jakarta</p>
+                                <p>Economy, Acounting</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="education">
+                        <h1 class="title">
+                            Experience
+                        </h1>
+                        <div class="experience-group">
+                            <p><strong>2008 - 2012</strong></p>
+                            <div class="__">
+                                <p>STIE Swadaya, Jakarta</p>
+                                <p>Economy, Acounting</p>
+                            </div>
+                        
+                        </div>
+                        <div class="experience-group">
+                            <p><strong>2008 - 2012</strong></p>
+                            <div class="__">
+                                <p>STIE Swadaya, Jakarta</p>
+                                <p>Economy, Acounting</p>
+                            </div>
+                        
+                        </div>
+                        <div class="experience-group">
+                            <p><strong>2008 - 2012</strong></p>
+                            <div class="__">
+                                <p>STIE Swadaya, Jakarta</p>
+                                <p>Economy, Acounting</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

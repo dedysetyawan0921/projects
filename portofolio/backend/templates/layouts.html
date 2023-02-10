@@ -17,10 +17,10 @@
                     <h3>My Portofolio</h3>
                 </div>
                 <div class="nav-menu">
-                    <a class="active" href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Project</a>
+                    <a {% block home %}{% endblock %} href="/home">Home</a>
+                    <a {% block about %}{% endblock %} href="/about">About</a>
+                    <a {% block skill %}{% endblock %} href="#">Skills</a>
+                    <a {% block project %}{% endblock %} href="#">Project</a>
                 </div>
                 {% if current_user.is_authenticated %}
                 <div class="nav-user-menu">

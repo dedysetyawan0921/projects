@@ -1,7 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, DateField, TextAreaField, EmailField, IntegerField
-from wtforms.validators import DataRequired, Length, Email
-from models import Bio
+from wtforms import StringField, DateField, TextAreaField, EmailField, IntegerField, SubmitField
+from wtforms.validators import DataRequired, Email
 
 class AboutForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
@@ -11,3 +10,4 @@ class AboutForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired(), Email()])
     image_link = StringField('Image Link', validators=[DataRequired()])
     phone = IntegerField('Phone', validators=[DataRequired()])
+    submit = SubmitField('Create')

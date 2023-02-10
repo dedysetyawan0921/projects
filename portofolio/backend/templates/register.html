@@ -1,1 +1,11 @@
-register
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+        {{ form.username(class="form-control") }}
+
+    {{ form.email(class="form-control") }}
+        {{ form.password(class="form-control") }}
+            {{ form.confirm_password(class="form-control") }}
+        {{ form.submit(class="btn") }}
+
+
+</form>
